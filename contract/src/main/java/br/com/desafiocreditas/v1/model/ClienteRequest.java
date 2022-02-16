@@ -1,5 +1,6 @@
 package br.com.desafiocreditas.v1.model;
 
+import br.com.desafiocreditas.commons.validate.VerificaSeTemApenasUmaPalavra;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class ClienteRequest {
 	@CPF
 	private String cpf;
 	@NotBlank
+	@VerificaSeTemApenasUmaPalavra
 	private String nome;
 	@Positive
 	private int idade;
